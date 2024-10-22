@@ -9,39 +9,50 @@
     </head>
     <body>
         <form>
-            <label for="ime">Ime:</label>
-            <input type="text" id="ime" name="ime">
-
-            <label for="grad">Grad:</label>
-            <input type="text" id="grad" name="grad"><br>
-
-            <label for="prezime">Prezime:</label>
-            <input type="text" id="prezime" name="prezime">
-
-            <label for="brojIndeksa">Broj indeksa:</label>
-            <input type="text" id="brojIndeksa" name="brojIndeksa"><br>
-
-            Spol: 
-            <input type="radio" id="muski" name="spol">
-            <label for="muski">muški</label>
-            <input type="radio" id="zenski" name="spol">
-            <label for="zenski">ženski</label>
-
-            <input type="checkbox" id="samofinansirajuci" name="samofinansirajuci">
-            <label for="samofinansirajuci">Samofinansirajući</label><br>
-
-            Odsjek: 
-            <input type="radio" id="AE" name="odsjek">
-            <label for="AE">AE</label>
-            <input type="radio" id="EE" name="odsjek">
-            <label for="EE">EE</label>
-            <input type="radio" id="RI" name="odsjek">
-            <label for="RI">RI</label>
-            <input type="radio" id="TK" name="odsjek">
-            <label for="TK">TK</label><br>
-
-            <input type="submit" value="Potvrdi">
-            <input type="button" value="Poništi">
+            <table>
+                <tr>
+                    <td><label for="ime">Ime:</label></td>
+                    <td><input type="text" id="ime" name="ime"></td>
+                    <td><label for="grad">Grad:</label></td>
+                    <td><input type="text" id="grad" name="grad"></td>
+                </tr>
+                <tr>
+                    <td><label for="prezime">Prezime:</label></td>
+                    <td><input type="text" id="prezime" name="prezime"></td>
+                    <td><label for="brojIndeksa">Broj indeksa:</label></td>
+                    <td><input type="text" id="brojIndeksa" name="brojIndeksa"></td>
+                </tr>
+                <tr>
+                    <td>Spol:</td>
+                    <td>
+                        <input type="radio" id="muski" name="spol">
+                        <label for="muski">muški</label>
+                        <input type="radio" id="zenski" name="spol">
+                        <label for="zenski">ženski</label>
+                    </td>
+                    <td colspan="2">
+                        <input type="checkbox" id="samofinansirajuci" name="samofinansirajuci">
+                        <label for="samofinansirajuci">Samofinansirajući</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Odsjek:</td>
+                    <td colspan="3">
+                        <input type="radio" id="AE" name="odsjek">
+                        <label for="AE">AE</label>
+                        <input type="radio" id="EE" name="odsjek">
+                        <label for="EE">EE</label>
+                        <input type="radio" id="RI" name="odsjek">
+                        <label for="RI">RI</label>
+                        <input type="radio" id="TK" name="odsjek">
+                        <label for="TK">TK</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Potvrdi"></td>
+                    <td colspan="2"><input type="reset" value="Poništi" style="float: right;"></td>
+                </tr>
+            </table>
         </form>
 
         <p>Dugme Potvrdi šalje formu negdje (bilo gdje), a dugme Poništi je resetuje.</p>
