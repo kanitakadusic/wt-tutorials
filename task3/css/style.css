@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+}
+
+body {
+    padding: 10px;
+}
+
+h1 {
+    margin: 20px 0;
+}
+
+.loader {
+    border: 1px solid gray;
+    border-left: 80px solid gray;
+    width: 200px;
+    height: 20px;
+    float: left;
+    margin-right: 5px;
+}
+
+form {
+    margin: 30px 0;
+}
+
+input.top {
+    margin-bottom: 5px;
+}
+
+input.bottom {
+    margin-top: 5px;
+}
+
+button.left {
+    margin-right: 5px;
+}
+
+button.right {
+    margin-left: 5px;
+}
