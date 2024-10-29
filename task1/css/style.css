@@ -1,0 +1,25 @@
+body {
+    background-color: aqua;
+}
+
+h1 {
+    text-align: center;
+}
+
+.code-snippet {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 30px;
+}
+
+.indentation {
+    margin-left: 70px;
+}
+
+img {
+    width: 30%;
+    float: left;
+}
+
+p.clear {
+    clear: both;
+}
