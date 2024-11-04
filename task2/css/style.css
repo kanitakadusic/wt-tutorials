@@ -12,7 +12,7 @@ table {
 }
 
 tr:nth-child(odd) {
-    background-color:#FFF2CC;
+    background-color: #FFF2CC;
 }
 
 th, td {
