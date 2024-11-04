@@ -1,8 +1,12 @@
-let odgovor = prompt("Kako se zoves?", "Imenom i prezimenom");
+let odgovor = prompt("Unesite neki tekst", "12345");
 
 if (odgovor != null && odgovor != "") {
-    let ok = confirm("Pritisnite \"OK\" za prikaz imena u alert box-u, a \"Cancel\" za prikaz direktno na stranici.");
+    let obrnutOdgovor = "";
 
-    if (ok) alert(odgovor);
-    else document.write(odgovor);
+    for (let slovo of odgovor) {
+        obrnutOdgovor = slovo + obrnutOdgovor;
+    }
+    
+    alert(obrnutOdgovor);
+    //alert(odgovor.split("").reverse().join(""));
 }
