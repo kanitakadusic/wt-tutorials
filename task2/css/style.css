@@ -1,0 +1,25 @@
+body {
+    font-family: sans-serif;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table {
+    margin: 0 auto;
+}
+
+tr:nth-child(odd) {
+    background-color:#FFF2CC;
+}
+
+th, td {
+    text-align: center;
+    padding: 10px;
+}
+
+th {
+    background-color: #CCCCCC;
+}
