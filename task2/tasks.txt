@@ -1,0 +1,6 @@
+1,Namirnice,Kupiti namirnice za ručak.
+2,Veš,Oprati bijeli veš.
+3,Suđe,Poredati suđe u mašinu.
+4,Smeće,Izbaciti smeće.
+5,Prašina,Obrisati prašinu.
+6,Voće,Kupiti voća.
