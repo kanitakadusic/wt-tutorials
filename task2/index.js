@@ -33,6 +33,19 @@ function addRecord(filename, record) {
     });
 }
 
+function writeRecords(filename, records) {
+    return new Promise((resolve, reject) => {
+        const content = records
+            .map(record => `${record.id},${record.title},${record.description}`)
+            .join("\r\n") + "\r\n";
+
+        fs.writeFile(filename, content, err => {
+            if (err) return reject(err);
+            resolve(records);
+        });
+    });
+}
+
 app.get('/zadaci', async (req, res) => {
     try {
         const records = await getRecords('tasks.txt');
@@ -56,6 +69,30 @@ app.post('/zadatak', async (req, res) => {
         } else {
             await addRecord('tasks.txt', { id, title, description });
             jsonResponse.status = "Task added successfully!";
+        }
+
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify(jsonResponse, null, 4));
+    } catch (err) {
+        res.status(500).send('An error occurred while processing your request.');
+    }
+});
+
+app.put('/zadatak/:id', async (req, res) => {
+    const id = req.params.id;
+    const { title, description } = req.body;
+
+    try {
+        const records = await getRecords('tasks.txt');
+        const index = records.findIndex(record => record.id === id);
+        const jsonResponse = {}
+
+        if (index == -1) {
+            jsonResponse.status = "ID does not exist!";
+        } else {
+            records[index] = { id, title, description };
+            await writeRecords('tasks.txt', records);
+            jsonResponse.status = "Task successfully updated!";
         }
 
         res.writeHead(200, { 'Content-Type': 'application/json' });

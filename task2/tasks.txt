@@ -4,3 +4,4 @@
 4,Smeće,Izbaciti smeće.
 5,Prašina,Obrisati prašinu.
 6,Voće,Kupiti voća.
+7,Title,Description.
