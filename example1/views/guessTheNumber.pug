@@ -1,0 +1,17 @@
+html 
+    body 
+        h1 Guess the number 
+        p #{attempt.numberOfAttempts}
+        h2 #{attempt.message}
+        form(
+            action="/",
+            method="POST"
+        )
+            input(
+                type="text",
+                name="attempt"
+            )
+            input(
+                type="submit",
+                value="guess"
+            )
